@@ -1,0 +1,150 @@
+/* CONTENEDOR GENERAL */
+.product-detail {
+  display: flex;
+  gap: 4rem;
+  padding: 4rem 6rem;
+  min-height: 80vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/* IMAGEN */
+.product-detail .left {
+  width: 100%;
+  max-width: 500px;
+}
+
+.product-detail .left img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 24px;
+  object-fit: cover;
+
+  /* sombra más sutil */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+  /* sin animación */
+  transition: none;
+}
+
+/* eliminar hover completamente */
+.product-detail .left img:hover {
+  transform: none;
+}
+
+/* INFO DERECHA */
+.product-detail .right {
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* TITULO */
+.product-detail .right h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+/* DESCRIPCION */
+.product-detail .description {
+  font-size: 0.95rem;
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
+/* PRECIO */
+.product-detail .price {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+/* BOTON LAVANDA GLASS */
+.add-to-cart-detail {
+  margin-top: 1rem;
+  align-self: flex-start;
+
+  padding: 0.9rem 2.2rem;
+  border-radius: 999px;
+
+  background: rgba(151, 119, 212, 0.619);
+  border: 1px solid rgba(151, 119, 212, 0.619);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  color: white;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* HOVER BOTON */
+.add-to-cart-detail:hover {
+  transform: translateY(-4px) scale(1.02);
+  background: rgba(200, 180, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(180, 150, 255, 0.25);
+}
+
+/* CLICK */
+.add-to-cart-detail:active {
+  transform: scale(0.96);
+}
+
+/* TAGS (si después los agregás) */
+.product-tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.product-tag {
+  font-size: 0.7rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .product-detail {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .product-detail .right {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .add-to-cart-detail {
+    align-self: center;
+  }
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title-row h1 {
+  margin: 0;
+}
+
+.title-row .price {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #666;
+}

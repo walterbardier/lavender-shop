@@ -1,0 +1,185 @@
+/* ========================= */
+/* WRAPPER HERO */
+/* ========================= */
+
+.swiper-wrapper-custom {
+  position: relative;
+}
+
+/* ========================= */
+/* SWIPER */
+/* ========================= */
+
+.mySwiper {
+  width: 100%;
+  height: 70vh;
+}
+
+/* ========================= */
+/* SLIDES */
+/* ========================= */
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide h2 {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: white;
+  font-size: 2.5rem;
+  transition: transform 0.2s ease;
+}
+
+/* ========================= */
+/* NAV BUTTONS (CLEAN APPLE STYLE) */
+/* ========================= */
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  z-index: 20;
+}
+
+/* flecha base */
+.nav-btn::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+
+  border-top: 3.5px solid white;
+  border-right: 3.5px solid white;
+
+  border-radius: 3px;
+
+  display: block;
+}
+
+/* left */
+.nav-btn.left {
+  left: 10px;
+}
+
+.nav-btn.left::before {
+  transform: rotate(-135deg);
+}
+
+/* right */
+.nav-btn.right {
+  right: 10px;
+}
+
+.nav-btn.right::before {
+  transform: rotate(45deg);
+}
+
+/* hover */
+.nav-btn:hover {
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.35));
+}
+
+/* suaviza hover sin romper forma */
+.nav-btn:hover::before {
+  transform: scale(1.15) rotate(45deg);
+}
+
+.nav-btn.left:hover::before {
+  transform: scale(1.15) rotate(-135deg);
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none !important;
+  content: "" !important;
+}
+
+/* ========================= */
+/* PAGINATION PÍLDORA */
+/* ========================= */
+
+.swiper-pagination {
+  bottom: 20px !important;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.5);
+  transition: 0.4s cubic-bezier(.22,1,.36,1);
+}
+
+.swiper-pagination-bullet-active {
+  width: 22px;
+  background: white;
+}
+
+/* ========================= */
+/* APPLE TRANSITION EFFECT */
+/* ========================= */
+
+/* fade + zoom base */
+.swiper-slide {
+  opacity: 0;
+  transform: scale(1.08);
+  filter: blur(12px);
+  transition: all 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* active slide */
+.swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0px);
+}
+
+/* prev/next suave */
+.swiper-slide-prev,
+.swiper-slide-next {
+  opacity: 0.4;
+  transform: scale(1.05);
+  filter: blur(6px);
+}
+
+/* imagen acompaña el zoom */
+.swiper-slide img {
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.swiper-slide-active img {
+  transform: scale(1.05);
+}

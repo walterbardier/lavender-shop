@@ -1,0 +1,80 @@
+.product-card {
+  padding: 18px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* HEADER (nombre + precio) */
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 12px;
+}
+
+.product-card h3 {
+  font-size: 16px;
+  margin: 0;
+  color: #333;
+}
+
+.price {
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+}
+
+/* BOTÓN */
+.add-to-cart {
+  width: 100%;
+  padding: 10px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #a78bfa;
+  color: white;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.add-to-cart:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(167, 139, 250, 0.5);
+}
+
+.add-to-cart:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 0 6px rgba(167, 139, 250, 0.2);
+}
+
+/* IMAGEN */
+.image-container {
+  width: 100%;
+  height: 180px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}

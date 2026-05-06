@@ -1,0 +1,221 @@
+/* CONTENEDOR GENERAL */
+.shop {
+  min-height: 100vh;
+  padding: 100px 40px 140px;
+
+  background: linear-gradient(
+    120deg,
+    #f5f3ff,
+    #ede9fe,
+    #fdf4ff,
+    #f5f3ff
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 18s ease infinite;
+}
+
+/* ========================= */
+/* GRID PRODUCTOS */
+/* ========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+/* ========================= */
+/* TABS (FILTROS) */
+/* ========================= */
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+
+  margin-bottom: 40px;
+}
+
+/* BOTONES TAB */
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ICONOS MÁS GRANDES */
+.tab svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2; /* outline más limpio */
+}
+
+/* HOVER */
+.tab:hover {
+  transform: translateY(-2px);
+  color: #a78bfa;
+}
+
+/* ACTIVO */
+.tab.active {
+  background: #a78bfa;
+  color: white;
+  box-shadow: 0 6px 20px rgba(167, 139, 250, 0.4);
+}
+
+/* ========================= */
+/* PRODUCT CARD */
+/* ========================= */
+
+.product-card {
+  padding: 15px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* IMAGEN */
+.product-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+/* TEXTO */
+.product-card h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* ========================= */
+/* BOTÓN ADD TO CART */
+/* ========================= */
+
+.add-to-cart {
+  width: 100%;
+  padding: 10px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #a78bfa;
+  color: white;
+
+  cursor: pointer;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: all 0.25s ease;
+}
+
+/* HOVER */
+.add-to-cart:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(167, 139, 250, 0.5);
+}
+
+/* CLICK GLOW */
+.add-to-cart:active {
+  transform: scale(0.96);
+  box-shadow: 0 0 0 6px rgba(167, 139, 250, 0.2);
+}
+
+/* ========================= */
+/* ANIMACIÓN FONDO */
+/* ========================= */
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+.shop-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.shop-header h1 {
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: #2d2d2d;
+}
+
+.shop-header p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #666;
+
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+  line-height: 1.6;
+}
+
+/* WRAPPER PARA ANIMACIÓN */
+.product-wrapper {
+  opacity: 0;
+  transform: translateY(20px);
+
+  animation: fadeUp 0.5s ease forwards;
+}
+
+/* KEYFRAME */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SKELETON */
+.skeleton-card {
+  height: 260px;
+  border-radius: 20px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.2) 25%,
+    rgba(255,255,255,0.4) 50%,
+    rgba(255,255,255,0.2) 75%
+  );
+
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+
+  backdrop-filter: blur(10px);
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

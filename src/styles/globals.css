@@ -1,0 +1,276 @@
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', sans-serif; /* nueva fuente elegante */
+  background: #f4f4f4;
+  overflow-x: hidden;
+}
+
+/* CONTENEDOR FULL WIDTH */
+.home-container {
+  width: 100%;
+  margin: 0;
+}
+
+/* ========================= */
+/* HERO SWIPER */
+/* ========================= */
+
+.mySwiper {
+  width: 100%;
+  height: 85vh;   /* un poco menos dramático */
+  overflow: hidden;
+  position: relative;
+}
+
+/* SLIDE */
+.slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* IMAGEN FULL COVER */
+.slide img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transition: transform 1.2s ease;
+}
+
+/* ZOOM SUAVE */
+.swiper-slide-active .slide img {
+  transform: scale(1.05);
+}
+
+/* OVERLAY OSCURO */
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 2;
+}
+
+/* TEXTO HERO */
+.slide h2 {
+  position: relative;
+  z-index: 3;
+  font-size: 4rem;
+  font-weight: 600;
+  color: white;
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+/* CONTENEDOR PAGINACIÓN */
+.mySwiper .swiper-pagination {
+  bottom: 30px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* BULLET NORMAL */
+.mySwiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: rgba(255,255,255,0.35);
+  border-radius: 50%;
+  opacity: 1;
+  transition: width 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ACTIVO - PÍLDORA */
+.mySwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 32px;
+  height: 8px;
+  border-radius: 999px;   /* borde igual a píldora */
+  background: white;
+  box-shadow: 0 0 12px rgba(255,255,255,0.6);
+}
+
+/* FLECHAS */
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white !important;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+/* ICONO INTERNO */
+.mySwiper .swiper-button-next::after,
+.mySwiper .swiper-button-prev::after {
+  font-size: 14px !important;
+  font-weight: 700;
+  color: white !important;
+}
+
+/* HOVER FLECHAS */
+.mySwiper .swiper-button-next:hover,
+.mySwiper .swiper-button-prev:hover {
+  background: rgba(255,255,255,0.25);
+  transform: scale(1.1);
+}
+
+/* ========================= */
+/* INFO SECTION LAVENDER */
+/* ========================= */
+
+.info-section {
+  padding: 120px 20px;
+  background: linear-gradient(to bottom, #f3f0ff, #ffffff);
+  text-align: center;
+}
+
+/* TITULO SHIPPING */
+.shipping-text h3 {
+  font-size: 2.5rem;
+  color: #5e4b8b;
+  margin-bottom: 15px;
+}
+
+.shipping-text p {
+  max-width: 600px;
+  margin: 0 auto 70px auto;
+  color: #6f6f6f;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* CARDS */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 70px;
+}
+
+.info-card {
+  background: white;
+  padding: 40px 30px;
+  width: 260px;
+  border-radius: 22px;
+  box-shadow: 0 15px 35px rgba(94, 75, 139, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(94, 75, 139, 0.15);
+}
+
+/* ICONOS */
+.icon {
+  font-size: 2rem;
+  margin-bottom: 18px;
+}
+
+/* TITULOS CARDS */
+.info-card h4 {
+  color: #5e4b8b;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.info-card p {
+  color: #7a7a7a;
+  font-size: 0.95rem;
+}
+
+/* BOTÓN BUY NOW CON FLECHITA */
+.buy-button {
+  background: #8f7aea;
+  color: white;
+  padding: 16px 45px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* espacio entre texto y flecha */
+  transition: all 0.3s ease;
+}
+
+.buy-button span.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* HOVER BUY NOW */
+.buy-button:hover {
+  background: #7a67db;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(143, 122, 234, 0.35);
+}
+
+.buy-button:hover span.arrow {
+  transform: translateX(5px); /* la flechita se mueve a la derecha */
+}
+
+/* BOTÓN EXPLORE COLLECTION SIMPLE - ACTUALIZADO */
+.explore-button {
+  background: transparent;
+  color: #4a4a4a;        /* gris oscuro tirando a negro */
+  border: 2px solid #4a4a4a; /* borde un poquito más grueso */
+  padding: 12px 35px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;       /* texto más grueso */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* HOVER EXPLORE COLLECTION */
+.explore-button:hover {
+  background: #e8e8e8; 
+  border-color: #4a4a4a;
+  color: #2a2a2a;
+  transform: translateY(-2px);
+}
+
+/* ========================= */
+/* WHY CHOOSE LAVENDER SHOP */
+/* ========================= */
+
+.why-choose-section {
+  padding: 100px 20px;
+  background: #f9f7ff;
+  text-align: center;
+}
+
+.why-choose-section h3 {
+  font-size: 2.5rem;
+  color: #5e4b8b;
+  margin-bottom: 20px;
+}
+
+.why-choose-section p {
+  max-width: 650px;
+  margin: 0 auto 40px auto;
+  color: #6f6f6f;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* BOTÓN EXPLORE COLLECTION */
+.explore-button {
+  display: inline-block;
+}

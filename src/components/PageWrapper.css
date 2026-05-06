@@ -1,0 +1,39 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ENTRA */
+.page.fadeIn {
+  animation: fadeInBlur 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* SALE */
+.page.fadeOut {
+  animation: fadeOutBlur 0.25s ease forwards;
+}
+
+/* ✨ Apple style */
+@keyframes fadeInBlur {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOutBlur {
+  0% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+}

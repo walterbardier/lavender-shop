@@ -1,0 +1,179 @@
+.glass-navbar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 28px;
+
+  padding: 14px 22px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+
+  z-index: 1000;
+  /* overflow: hidden; */
+  /* hidden: para que funcione como mascara y no se vea el glow fuera del navbar, pero rompe el hover de los botones, asi que lo quitamos y dejamos que el glow se vea un poco afuera */
+  overflow: visible;
+
+  transition: all 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* glow */
+.glass-navbar::before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(177, 138, 231, 0.20),
+    rgba(177, 138, 231, 0.10),
+    transparent 70%
+  );
+  filter: blur(22px);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.glass-navbar:hover::before {
+  opacity: 1;
+}
+
+.dock {
+  display: flex;
+  gap: 22px;
+}
+
+/* iconos */
+.icon-btn {
+  position: relative;
+  isolation: isolate;
+
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #444;
+  transition: all 0.25s ease;
+  z-index: 2;
+}
+
+.icon-btn {
+  transform: translateY(calc(var(--is-active) * -6px))
+             scale(calc(1 + var(--is-active) * 0.15));
+}
+
+.icon-btn:not(.active):hover {
+  transform: translateY(-4px) scale(1.15);
+  color: #8b6fcf;
+}
+
+.icon-btn.active {
+  color: #8b6fcf;
+}
+
+/* 🔥 BACK BUTTON FIX */
+.back-btn {
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  padding: 0;
+  background: transparent !important;
+
+  transform: none !important;
+}
+
+.back-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  color: #8b6fcf;
+}
+
+/* dot */
+.dot {
+  position: absolute;
+  bottom: -2px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #8b6fcf;
+}
+
+/* BADGE */
+.badge {
+  position: absolute;
+  top: -6px;   /* sube */
+  right: -6px; /* se corre a la derecha */
+
+  min-width: 16px;
+  height: 16px;
+
+  padding: 2px 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.6rem;
+  font-weight: 600;
+
+  color: white;
+  background: #8b6fcf;
+
+  border-radius: 999px;
+
+  box-shadow: 0 2px 6px rgba(139, 111, 207, 0.6);
+
+  pointer-events: none;
+}
+
+.glass-navbar.compact {
+  transform: translateX(-50%) scale(0.88);
+}
+
+/* cart bounce */
+.cart-bounce {
+  display: flex;
+  animation: cartPop 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes cartPop {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.3) translateY(-4px); }
+  60% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+/* 🔥 BACK REAL (sin heredar icon-btn) */
+.back-btn {
+  all: unset; /* borra TODOS los estilos heredados */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  color: #444;
+
+  z-index: 2;
+}
+
+/* hover limpio */
+.back-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  color: #8b6fcf;
+  transition: all 0.2s ease;
+}

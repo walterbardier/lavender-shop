@@ -1,0 +1,292 @@
+.cart-page {
+  padding: 40px;
+  color: #222; /* gris oscuro base */
+}
+
+.cart-count {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.cart-container {
+  display: flex;
+  gap: 30px;
+}
+
+/* 🛍️ ITEMS */
+.cart-items {
+  flex: 0.8;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+
+  border-radius: 20px;
+  padding: 20px;
+
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+/* 🧠 INFO */
+.item-info h3 {
+  margin: 0;
+  color: #222; /* 🔥 gris oscuro */
+}
+
+.category {
+  display: block;
+  font-size: 0.8rem;
+  color: #888; /* 🔥 gris más claro */
+  margin-top: 4px;
+}
+
+/* ➕➖ CONTROLES */
+.item-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.item-controls button {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.1);
+  color: #444;
+  cursor: pointer;
+
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  transition: all 0.2s ease;
+}
+
+.item-controls button:hover {
+  background: rgba(139,111,207,0.1);
+  color: #8b6fcf;
+}
+
+/* 💰 PRECIO */
+.item-price {
+  width: 100px;
+  text-align: right;
+  font-weight: bold;
+  color: #222; /* 🔥 gris oscuro */
+}
+
+/* 🗑️ */
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #ff5c5c;
+  cursor: pointer;
+
+  margin-left: 10px;
+}
+
+/* 🧾 SUMMARY */
+.cart-summary {
+  flex: 0.2;
+
+  height: fit-content;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+
+  border-radius: 20px;
+  padding: 20px;
+
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  color: #444;
+}
+
+.summary-row.total {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+/* 💜 CHECKOUT (más oscuro + bold) */
+.checkout-btn {
+  margin-top: 20px;
+  width: 100%;
+
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+
+  background: rgba(139, 111, 207, 0.9);
+  color: white;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.checkout-btn:hover {
+  box-shadow: 0 0 25px rgba(139,111,207,0.6);
+}
+
+.checkout-btn:active {
+  filter: blur(1px);
+}
+
+/* 🧊 CONTINUE (outline) */
+.continue-btn {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+
+  color: #444;
+  text-decoration: none;
+
+  padding: 10px;
+  border-radius: 10px;
+
+  border: 1px solid #444;
+
+  background: transparent;
+
+  transition: all 0.2s ease;
+}
+
+.continue-btn:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+/* 🖼️ imagen producto */
+.item-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-right: 15px;
+
+  background: rgba(255,255,255,0.5);
+}
+
+/* ajustar grid */
+.cart-item {
+  grid-template-columns: auto 1fr auto auto;
+  gap: 15px;
+}
+
+/* ✨ bounce cantidad */
+.qty {
+  display: inline-block;
+  min-width: 20px;
+  text-align: center;
+}
+
+.qty.bounce {
+  animation: bounce 0.2s ease;
+}
+
+@keyframes bounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* 🗑️ hover animado */
+.delete-btn {
+  transition: transform 0.2s ease;
+}
+
+.delete-btn:hover {
+  transform: scale(1.2) rotate(-10deg);
+}
+
+/* 💜 transición iOS */
+.checkout-transition {
+  animation: pageFade 0.3s ease forwards;
+}
+
+@keyframes pageFade {
+  from {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.96);
+    filter: blur(6px);
+  }
+}
+
+/* ✨ animación borrar estilo iOS */
+.cart-item.removing {
+  animation: removeItem 0.3s ease forwards;
+}
+
+@keyframes removeItem {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+    filter: blur(0px);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.97) translateX(10px);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9) translateX(30px);
+    filter: blur(6px);
+  }
+}
+
+.total-amount {
+  position: relative;
+  font-weight: bold;
+}
+
+/* ✨ glow sutil cuando cambia */
+.total-amount::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 8px;
+
+  background: radial-gradient(
+    circle,
+    rgba(139,111,207,0.25),
+    transparent 70%
+  );
+
+  opacity: 0;
+  animation: totalGlow 0.4s ease;
+}
+
+@keyframes totalGlow {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}

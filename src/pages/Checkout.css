@@ -1,0 +1,43 @@
+.checkout {
+  max-width: 600px;
+  margin: 60px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.checkout input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+}
+
+.payments {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.pay-option {
+  flex: 1;
+  padding: 12px;
+  text-align: center;
+  border-radius: 14px;
+  background: #f4f4f4;
+  cursor: pointer;
+}
+
+.pay-option.active {
+  background: #cdb4f6;
+  color: white;
+}
+
+.complete {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background: #cdb4f6;
+  border-radius: 20px;
+}
