@@ -23,6 +23,11 @@ LavenderShop was created as a practice project to strengthen frontend developmen
 - Swiper.js
 - CSS (custom, glassmorphism UI)
 
+## ⚙️ Notes
+- This project was bootstrapped with Vite.
+
+
+
 ## 🚀 Live Demo
 
 👉 https://lavanderShop.vercel.app
