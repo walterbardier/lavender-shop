@@ -1,16 +1,56 @@
-# React + Vite
+# 🌿 LavenderShop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+LavenderShop is a modern e-commerce frontend built with React, JavaScript, HTML, and CSS. It focuses on a clean, minimal and elegant UI experience inspired by Apple-style design systems.
 
-Currently, two official plugins are available:
+The project includes smooth page transitions, an interactive product catalog, a dynamic shopping cart system, and responsive layouts optimized for both desktop and mobile. It also features micro-interactions such as hover animations, swipeable hero sections, and fluid UI feedback to enhance user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+LavenderShop was created as a practice project to strengthen frontend development skills, UI/UX design implementation, and component-based architecture using React.
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🛍️ Product browsing & detail view
+- 🛒 Cart with dynamic item counter
+- 🎞️ Smooth page transitions (blur + fade)
+- 🎠 Hero carousel with custom navigation
+- 💫 Microinteractions (hover, ripple, animations)
+- 📱 Fully responsive design
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧰 Tech Stack
+
+- React
+- React Router
+- Swiper.js
+- CSS (custom, glassmorphism UI)
+
+## 🚀 Live Demo
+
+👉 https://lavanderShop.vercel.app
+
+## 📸 Screenshots
+
+### Home
+![Home](./public/screenshots/home1.png)
+![Home](./public/screenshots/home2.png)
+
+### Shop
+![Shop](./public/screenshots/shop1.png)
+![Shop](./public/screenshots/shop2.png)
+
+### Product Detail
+![Product](./public/screenshots/product1.png)
+![Product](./public/screenshots/product2.png)
+![Product](./public/screenshots/product3.png)
+
+### Cart
+![Cart](./public/screenshots/cart1.png)
+![Cart](./public/screenshots/cart2.png)
+
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/walterbardier/lavanderShop.git
+cd lavanderShop
+npm install
+npm run dev
