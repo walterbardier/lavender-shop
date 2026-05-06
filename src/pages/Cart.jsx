@@ -184,8 +184,9 @@ export default function Cart() {
               ${displayTotal.toFixed(2)}
             </motion.span>
           </div>
-
-          <button className="checkout-btn" onClick={handleCheckout}>
+          
+          {/* <button className="checkout-btn" onClick={handleCheckout}></button> */}
+          <button className="checkout-btn">
             Checkout
           </button>
 
