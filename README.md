@@ -1,10 +1,10 @@
-# 🌿 LavenderShop
+# 🌿 Lavender Shop
 
-LavenderShop is a modern e-commerce frontend built with React, JavaScript, HTML, and CSS. It focuses on a clean, minimal and elegant UI experience inspired by Apple-style design systems.
+Lavender Shop is a modern e-commerce frontend built with React, JavaScript, HTML, and CSS. It focuses on a clean, minimal and elegant UI experience inspired by Apple-style design systems.
 
 The project includes smooth page transitions, an interactive product catalog, a dynamic shopping cart system, and responsive layouts optimized for both desktop and mobile. It also features micro-interactions such as hover animations, swipeable hero sections, and fluid UI feedback to enhance user experience.
 
-LavenderShop was created as a practice project to strengthen frontend development skills, UI/UX design implementation, and component-based architecture using React.
+Lavender Shop was created as a practice project to strengthen frontend development skills, UI/UX design implementation, and component-based architecture using React.
 
 
 ## ✨ Features
@@ -30,7 +30,7 @@ LavenderShop was created as a practice project to strengthen frontend developmen
 
 ## 🚀 Live Demo
 
-👉 https://lavanderShop.vercel.app
+👉 https://lavender-shop.vercel.app
 
 ## 📸 Screenshots
 
@@ -55,7 +55,7 @@ LavenderShop was created as a practice project to strengthen frontend developmen
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/walterbardier/lavanderShop.git
-cd lavanderShop
+git clone https://github.com/walterbardier/lavender-shop.git
+cd lavender-shop
 npm install
 npm run dev
