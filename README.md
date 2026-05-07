@@ -30,7 +30,7 @@ Lavender Shop was created as a practice project to strengthen frontend developme
 
 ## 🚀 Live Demo
 
-👉 https://lavender-shop.vercel.app
+👉 https://lavender-shop-wb.vercel.app
 
 ## 📸 Screenshots
 
