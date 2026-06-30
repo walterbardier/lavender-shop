@@ -1,83 +1,85 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --primary: rgba(151, 119, 212, 0.619);
+  --secondary: #fad58b;
+  --secondary: rgba(255, 255, 255, 0.25);
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --primary-bg: rgba(151, 119, 212, 0.619);
+  --primary-bg-light: rgba(180, 146, 242, 0.619);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --primary-navbar: #8b6fcf;
+
+  --primary-dark: rgba(131, 87, 212, 0.619);
+  --primary-light: rgba(200, 174, 248, 0.619);
+
+  /* lavanda azulado */
+  --alternative: #a78bfa;
+  /* verde amarillento */
+  --alternative-2: rgba(159, 212, 119, 0.62);
+  /* verde más verde */
+  --alternative-3: rgba(150, 212, 119, 0.619);
+  /* verde lima */
+  --alternative-4: #94cf6f;
+  /* cute pink */
+  --anternative-5: #ea74bf;
+
+  --nav-bar-bg: rgba(255, 255, 255, 0.25);
+  --nav-bar-box-shadow: rgba(0, 0, 0, 0.12);
+
+  --icon-color: #444;
+
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #6c6c6c;
+
+  --btn-box-shadow-primary: rgba(185, 139, 250, 0.30);
+  --box-shadow-1: rgba(0, 0, 0, 0.11);
+
+
+  /* Fuentes */
+  --font-1: 'Syne', serif; /* Para títulos */
+  --font-2: 'Outfit', sans-serif; /* Para textos */
+  --font-3: 'Inter', sans-serif; /* Para textos */
+  --font-accent: 'Montserrat', sans-serif; /* Para etiquetas o detalles */
+
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+h1,
+h2,
+h3
+ {
+  font-family: var(--font-1);
 }
 
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-
-  /* SACAMOS esto que rompía todo */
-  /* display: flex; */
-  /* place-items: center; */
+p,
+h4 {
+  font-family: var(--font-2);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+h22 {
+  text-align: left;
+  margin: 10px 0;
+
+  display: block; /* para que de el salto de linea */
+  max-width: 8ch; /* aproximadamente 8 caracteres */
+
+  font-size: 80px;
+  font-weight: 600;
+  font-family: var(--font-1);
+  line-height: 1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+/* Para Chrome, Safari y Edge */
+::-webkit-scrollbar {
+  display: none;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    font-family: "Lato", system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 300; /* base más usable que 100 */
+/* Para Firefox */
+html {
+  scrollbar-width: none;
+}
 
-    color-scheme: light dark;
-    color: #2d2d2d; /* mejor que blanco sobre fondo claro */
-    background-color: #ffffff;
-
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Para Internet Explorer */
+html {
+  -ms-overflow-style: none;
 }

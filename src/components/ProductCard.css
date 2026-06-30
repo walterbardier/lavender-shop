@@ -1,11 +1,23 @@
+/* style.css */
+@import url('../index.css');
+
 .product-card {
   padding: 18px;
   border-radius: 20px;
 
-  background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(12px);
+  /* --- Glassmorphism Effect --- */
+  /* Fondo blanco con 70% de opacidad */
+  background: rgba(255, 255, 255, 0.7); 
+  
+  /* Borde sutil para definir el vidrio */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  
+  /* El desenfoque que pediste */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px); /* Compatibilidad con Safari */
 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  /* Sombra suave para dar profundidad */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
 
   transition: all 0.3s ease;
 }
@@ -21,18 +33,23 @@
   align-items: center;
 
   margin-bottom: 12px;
+  margin-top: 20px;
 }
 
 .product-card h3 {
   font-size: 16px;
   margin: 0;
   color: #333;
+
+  font-family: var(--font-2);
 }
 
 .price {
   font-size: 14px;
   font-weight: bold;
   color: #666;
+
+  font-family: var(--font-3);
 }
 
 /* BOTÓN */
@@ -48,6 +65,8 @@
   font-weight: bold;
 
   cursor: pointer;
+
+  font-family: var(--font-1);
 
   transition: all 0.25s ease;
 }

@@ -1,9 +1,18 @@
 import { useCart } from "../context/CartContext";
-import { FiPlus, FiMinus, FiTrash2 } from "react-icons/fi";
+
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import "./Cart.css";
+
 import { motion, AnimatePresence, useMotionValue, animate } from "framer-motion";
+
+import {
+  FiPlus,
+  FiMinus,
+  FiTrash2,
+  FiShoppingCart
+} from "react-icons/fi";
+
+import "./Cart.css";
 
 export default function Cart() {
   const { cart, addToCart, removeFromCart, decreaseQty } = useCart();

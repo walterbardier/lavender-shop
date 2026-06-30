@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
+import FloatingLogo from "./components/FloatingLogo";
 import PageWrapper from "./components/PageWrapper";
 
 import Home from "./pages/Home";
@@ -14,6 +15,7 @@ function Layout() {
   return (
     <>
       <Navbar />
+      <FloatingLogo />
 
       <Routes location={location} key={location.pathname}>
         <Route

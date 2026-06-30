@@ -81,12 +81,13 @@ export default function ProductCard({ product }) {
         <img src={product.image} alt={product.name} />
       </div>
 
-      {/* NUEVA FILA */}
+      {/* 1RA FILA */}
       <div className="product-header">
         <h3>{product.name}</h3>
         <span className="price">${product.price}</span>
       </div>
 
+      {/* 2DA FILA */}
       <button className="add-to-cart" onClick={handleAdd}>
         Add to Cart
       </button>

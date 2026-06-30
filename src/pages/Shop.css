@@ -1,3 +1,6 @@
+/* style.css */
+@import url('../index.css');
+
 /* CONTENEDOR GENERAL */
 .shop {
   min-height: 100vh;
@@ -20,8 +23,13 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  /* Esto decide cuántas columnas caben según el ancho disponible y fija el tamaño de cada item */
+
+  /* grid-template-columns: repeat(4, 1fr); 👉🏼 Esto crea hasta 4 columnas de igual tamaño (1fr) */
+  
   gap: 30px;
+  margin: 1px 50px 1px 50px;
 }
 
 /* ========================= */
@@ -53,12 +61,12 @@
 /* HOVER */
 .tab:hover {
   transform: translateY(-2px);
-  color: #a78bfa;
+  color: var(--primary-bg);
 }
 
 /* ACTIVO */
 .tab.active {
-  background: #a78bfa;
+  background: var(--primary-bg);
   color: white;
   box-shadow: 0 6px 20px rgba(167, 139, 250, 0.4);
 }
@@ -114,7 +122,7 @@
   border: none;
   border-radius: 999px;
 
-  background: #a78bfa;
+  background: var(--primary-bg);
   color: white;
 
   cursor: pointer;
@@ -164,9 +172,11 @@
 
 .shop-header h1 {
   font-size: 42px;
-  font-weight: 600;
+  font-weight: 710;
   letter-spacing: -1px;
   color: #2d2d2d;
+
+  font-family: var(--font-1);
 }
 
 .shop-header p {
@@ -179,6 +189,8 @@
   margin-right: auto;
 
   line-height: 1.6;
+
+  font-family: var(--font-2);
 }
 
 /* WRAPPER PARA ANIMACIÓN */

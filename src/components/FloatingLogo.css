@@ -1,0 +1,43 @@
+.floating-logo {
+  position: fixed;
+
+  /* posición */
+  top: -17px;
+  left: 10%;
+
+  transform: translateX(-50%);
+
+  /* siempre al frente */
+  z-index: 1000;
+
+  transition:
+    opacity .45s ease,
+    transform .45s ease;
+
+  pointer-events: auto;
+
+}
+
+.floating-logo img {
+  /* tamaño */
+  width: 150px;
+  height: auto;
+
+  display: block;
+}
+
+/* Visible */
+
+.floating-logo.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Hidden */
+
+.floating-logo.hide {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-20px);
+
+  pointer-events: none;
+}

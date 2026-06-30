@@ -1,3 +1,6 @@
+/* style.css */
+@import url('../index.css');
+
 /* CONTENEDOR GENERAL */
 .product-detail {
   display: flex;
@@ -16,7 +19,7 @@
 
 .product-detail .left img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1.5 / 1;
   border-radius: 24px;
   object-fit: cover;
 
@@ -49,9 +52,11 @@
 
 /* DESCRIPCION */
 .product-detail .description {
-  font-size: 0.95rem;
+  font-size: 1rem;
   opacity: 0.7;
   line-height: 1.6;
+
+  font-family: var(--font-3);
 }
 
 /* PRECIO */
@@ -59,6 +64,8 @@
   font-size: 1.6rem;
   font-weight: 500;
   margin-top: 0.5rem;
+
+  font-family: var(--font-2);
 }
 
 /* BOTON LAVANDA GLASS */
@@ -69,8 +76,8 @@
   padding: 0.9rem 2.2rem;
   border-radius: 999px;
 
-  background: rgba(151, 119, 212, 0.619);
-  border: 1px solid rgba(151, 119, 212, 0.619);
+  background: var(--primary-bg);
+  border: 0px solid var(--primary-bg);
 
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -85,15 +92,16 @@
 
 /* HOVER BOTON */
 .add-to-cart-detail:hover {
-  transform: translateY(-4px) scale(1.02);
-  background: rgba(200, 180, 255, 0.3);
-  box-shadow: 0 10px 30px rgba(180, 150, 255, 0.25);
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(167, 139, 250, 0.5);
 }
 
-/* CLICK */
+/* CLICK GLOW */
 .add-to-cart-detail:active {
   transform: scale(0.96);
+  box-shadow: 0 0 0 6px rgba(167, 139, 250, 0.2);
 }
+
 
 /* TAGS (si después los agregás) */
 .product-tags {
